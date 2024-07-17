@@ -1,7 +1,12 @@
-## Sharon's Pet Rescue: Pet Adoption Status  🐰💕🐹
+## Sharon's Pet Rescue: Pet Adoption Status [Tutorial] 🐰💕🐹
 
 ## Description
  This project aims to help Sharon’s Pet Rescue by creating a dynamic interface that shows the status of animals available for adoption. The goal is to provide visitors with information about each animal, including whether they are sleeping, awake, or ready to play.🐰💕🐹
+
+## Methods Used
+- Wrote factory function pattern that accepts each animal’s name, species, and tiredness as a parameter
+- Wrote methods to indicate each animal’s status, including whether they are sleeping or awake and ready to play
+
 
 ## Technologies Used
 - HTML: For structuring the content of the web page.
