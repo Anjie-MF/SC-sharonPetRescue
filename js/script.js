@@ -29,9 +29,24 @@ const baxter = createPet("Baxter", "hamster");
 const cleo = createPet("Cleo", "rat");
 const francine = createPet("Francine", "turtle");
 
-console.log(sora, clover, baxter, cleo, francine);
+//console.log(sora, clover, baxter, cleo, francine);
+//clover.sleep();
+//baxter.play();
+//console.log(clover, baxter);
 
-clover.sleep();
-baxter.play();
+clover.isTired = 8;
+francine.isTired = 9;
 
-console.log(clover, baxter);
+const allPets = ["sora", "clover", "baxter", "cleo", "francine"];
+//console.log(allPets);
+
+//function showPets(allPets){}; WRONG ----> Create a function called showPets. Use petArray as an argument.
+const showPets = function (petArray) {
+    pets.innerHTML = "";
+    for (let pet of petArray) {
+        let status = "Ready to play!";
+        if (pet.isTired >= 7) {
+            status = "Sleeping";
+        }
+    }
+}
