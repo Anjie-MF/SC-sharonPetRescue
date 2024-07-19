@@ -37,16 +37,25 @@ const francine = createPet("Francine", "turtle");
 clover.isTired = 8;
 francine.isTired = 9;
 
-const allPets = ["sora", "clover", "baxter", "cleo", "francine"];
+const allPets = [sora, clover, baxter, cleo, francine];
 //console.log(allPets);
 
 //function showPets(allPets){}; WRONG ----> Create a function called showPets. Use petArray as an argument.
 const showPets = function (petArray) {
     pets.innerHTML = "";
     for (let pet of petArray) {
-        let status = "Ready to play!";
+        let status = "ready to play!";
         if (pet.isTired >= 7) {
-            status = "Sleeping";
+            status = "sleeping.";
         }
+        const li = document.createElement("li");
+        //li.innerHTML = "${name} the ${species} is ${status}"; WRONG ---->Use innerHTML to add the pet name, species, and status to the list item like: <name> the <species> is <status>. 
+        li.innerHTML = `<span class="pet-name">${pet.name}</span> the ${pet.species} is ${status}`;
+        pets.append(li);
+
     }
 }
+
+statusButton.addEventListener("click", function () {
+    showPets(allPets);
+});
